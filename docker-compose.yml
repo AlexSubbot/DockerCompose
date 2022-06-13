@@ -10,7 +10,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - my_volume:/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war
+      - my_volume:/usr/local/tomcat/webapps/hello-1.0.war
     depends_on:
       - build
 volumes:
