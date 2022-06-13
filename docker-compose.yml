@@ -2,9 +2,16 @@ version: '3.8'
 services:
   build:
      build: ./venv
+     container_name: "build"
+     volumes:
+       - my_volume:/tmp/boxfuse-sample-java-war-hello/target
   prod:
     image: "tomcat:alpine"
     ports:
       - "8080:8080"
+    volumes:
+      - my_volume:/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war
     depends_on:
       - build
+volumes:
+  my_volume:
