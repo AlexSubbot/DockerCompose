@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk
+FROM maven:3.8.5-jdk-8
 RUN apt update
 RUN apt install git -y
 
