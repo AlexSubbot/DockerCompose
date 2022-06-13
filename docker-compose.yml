@@ -10,7 +10,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - my_volume:/tmp/boxfuse-sample-java-war-hello/target
+      - my_volume:/usr/local/tomcat/webapps/hello-1.0.war
     depends_on:
       - build
 volumes:
