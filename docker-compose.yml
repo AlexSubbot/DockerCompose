@@ -10,7 +10,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - - my_volume:/tmp/boxfuse-sample-java-war-hello/target
+      - my_volume:/tmp/boxfuse-sample-java-war-hello/target
     depends_on:
       - build
 volumes:
